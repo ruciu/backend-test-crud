@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:5.6
+    container_name: mysql-backend-test-crud
+    environment:
+      - MYSQL_DATABASE=backend-test-crud
+      - MYSQL_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_USER=nodeuser
+    ports:
+      - "3306:3306"
+volumes:
+  data_sql: {}
